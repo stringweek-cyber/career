@@ -1343,16 +1343,26 @@
                                 <span className="text-xl font-bold">{todayRecord.ratings[selectedMajor.id] || 0}</span>
                             </div>
                             </div>
-                            <input
-                            type="range"
-                            min="0"
-                            max="5"
-                            step="1"
-                            value={todayRecord.ratings[selectedMajor.id] || 0}
-                            onChange={(e) => handleRatingChange(selectedMajor.id, e.target.value)}
-                            className="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-indigo-600"
-                            />
-                            <div className="flex justify-between text-xs text-slate-400 mt-2 font-medium">
+                            <div className="relative pt-1">
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="5"
+                                    step="1"
+                                    value={todayRecord.ratings[selectedMajor.id] || 0}
+                                    onChange={(e) => handleRatingChange(selectedMajor.id, e.target.value)}
+                                    className="w-full h-3 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                />
+                                <div className="flex justify-between text-[10px] text-slate-300 mt-2 px-1 font-medium select-none">
+                                    <span>0</span>
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>4</span>
+                                    <span>5</span>
+                                </div>
+                            </div>
+                            <div className="flex justify-between text-xs text-slate-400 mt-1 font-medium">
                             <span>관심없음</span>
                             <span>매우관심</span>
                             </div>
